@@ -1,0 +1,244 @@
+
+@font-face {
+	font-family: 'Comfortaa-Regular'; 
+	src: local('Comfortaa-Regular'),
+	   url('/src/Comfortaa/Comfortaa-Regular.ttf') format('ttf'),
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: #000000;
+  transition: top 500ms ease-in-out;
+  z-index: 999;
+}
+
+.backgr {
+  background-color: #141414;
+}
+
+.links {
+  display: flex;
+  margin: 0 -1em;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+div{
+  frame{
+    padding-right: auto ;
+    padding-bottom: 110px;
+    padding-left:  auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    background-color: #141414;
+    opacity: 1;
+  }
+  max-width: 1920px;
+}
+
+.AboutP{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem; 
+}
+
+.AboutP p{
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.AboutP img{
+  max-width: 20vw;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+p{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  
+}
+
+h1 {
+  color: #dd40a1;
+}
+h2 {
+  color: #dd40a1;
+  font-style: Comfortaa-Regular;
+}
+
+
+
+.AboutS{
+  margin-left: 1.5vw;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+
+.block-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  }
+  
+  .block-row .item {
+  border: 1px solid #ddd;
+  border-color: rgb(236, 146, 226);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 400px;
+  }
+
+  .block-row .item img {
+    display: block;
+    margin: 10px auto;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50px;
+  }
+
+footer{
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem ;
+  background-color: #000000;
+  transition: top 500ms ease-in-out;
+}
+
+footer>h1{
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+
+}
+
+.cards {
+  display: grid;
+  /*Автоматически заполняем на всю ширину grid-контейнера */
+  grid-template-columns: repeat(auto-fill, 225px);
+  width: 100%;
+  max-width: 1500px; /* Ширина grid-контейнера */
+  justify-content: center;
+  justify-items: center; /* Размещаем карточку по центру */
+  column-gap: 80px; /* Отступ между колонками */
+  row-gap: 40px; /* Отступ между рядами */
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 280px;
+  min-height: 435px;
+  box-shadow: 1px 2px 4px rgba(41, 0, 27, 0.5);
+  display: flex;
+  flex-direction: column; 
+  border-radius: 20px;
+  transition: 0.2s;
+  position: relative;
+}
+
+/* При наведении на карточку - меняем цвет тени */
+.card:hover {
+  box-shadow: 4px 8px 16px rgba(255, 123, 222, 0.801);
+}
+
+.card__top {
+  flex: 0 0 220px; /* Задаем высоту 220px, запрещаем расширение и сужение по высоте */
+  position: relative;
+  overflow: hidden; /* Скрываем, что выходит за пределы */
+}
+
+/* Контейнер для картинки */
+.card img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.card__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Встраиваем картинку в контейнер card__image */
+  transition: 0.2s;
+}
+
+/* При наведении - увеличиваем картинку */
+.card__image:hover > img {
+  transform: scale(1.1);
+}
+
+.card__bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; /* Занимаем всю оставшуюся высоту карточки */
+  padding: 10px;
+}
+
+.card__title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: #414141;
+}
+
+.card__title:hover {
+  color: #dd40a1;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .AboutP{
+    display: block;
+  }
+
+  .AboutS{
+    display: block;
+  }
+
+}
+
+.unique{
+  display: flex;
+  justify-content: center;
+  margin-left: 1.5vw;
+}
